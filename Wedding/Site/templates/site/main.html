@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Wedding Page</title>
+
+<!-- Подключение шрифта Pacifico для имен и даты -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<!-- Подключение шрифта Amatic SC для остального текста и кнопок -->
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet" />
+   <!-- Подключение Dancing Script -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <!-- Подключение CSS -->
+<link rel="stylesheet" href="{% static 'site/css/main.css' %}">
+
+</head>
+<body>
+
+<!-- Блок с кнопками сверху -->
+<div class="top-buttons">
+  <!-- кнопки -->
+  <button onclick="location.href='{% url 'dress_code' %}'">Дресс-код</button>
+  <button onclick="location.href='{% url 'location' %}'">Тайминг</button>
+  <button onclick="location.href='{% url 'presence' %}'">Анкета гостя</button>
+</div>
+
+<div class="container">
+  <div class="names"><strong>Игорь &amp; Олеся</strong></div>
+  <!-- Сердечко -->
+  <img src="{% static 'site/images/сердечко.png' %}" alt="Сердечко" class="small-photo" />
+  <div class="centered-container">
+    <div class="invitation">Приглашаем разделить этот особенный<br> день вместе с нами!</div>
+    <div class="date-info">Суббота | 29 Августа 2026 | 13:40</div>
+  </div>
+  <!-- Дата и таймер -->
+  <div class="date-timer-container">
+    <div class="timer" id="countdown"></div>
+  </div>
+</div>
+
+<!-- Подключение JS -->
+<script src="{% static 'site/js/scripts.js' %}"></script>
+
+</body>
+</html>

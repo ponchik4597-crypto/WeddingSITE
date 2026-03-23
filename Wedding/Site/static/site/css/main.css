@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/фон.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Marck Script';
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+/* для кнопок */
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* расстояние между кнопками */
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+.top-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Marck Script';
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.top-buttons button:hover {
+    color: #ffffff; /* Эффект при наведении */
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-photo {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(0%) translateY(-10px);
+    width: 100px;
+    height: auto;
+    background: transparent;
+    transition: bottom 0.3s ease, transform 0.3s ease;
+}
+.names {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(3em, 10vw, 6em);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* эффект тени */
+    margin-bottom: 100px;
+    width: 100%;
+}
+/* Стили для блока с приглашением и датой */
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Для текста приглашения */
+.invitation {
+    font-family: 'Marck Script';
+    font-size: clamp(1.8em, 8vw, 3em);
+    padding: 0 10px;
+    color: white;
+    margin-bottom: 10px; /* разделение между блоками */
+    text-align: center;
+}
+
+/* Для блока с датой */
+.date-info {
+    font-family: 'Marck Script';
+    font-size: clamp(1.8em, 8vw, 3em);
+    padding: 0 10px;
+    color: white;
+    text-align: center;
+}
+/* Блок с датой и таймером */
+.date-timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+/* Стиль для даты */
+.date {
+    font-size: clamp(2.5em, 12vw, 6em);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* Стиль для таймера */
+.timer {
+    font-size: 2.5em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Marck Script';
+}
+@media (max-width: 480px) {
+    br {
+        display: none;
+    }
+    .top-buttons {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .top-buttons button {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .names {
+        font-size: 2.5em !important;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    .date-info {
+        font-size: 1.1em !important;
+        white-space: nowrap;
+        letter-spacing: -0.5px;
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .invitation, .date-info {
+        font-size: 1.5em !important;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+    }
+    .small-photo {
+        width: 60px;
+        margin: 10px auto;
+        transform: none;
+        left: auto;
+    }
+    .timer {
+        font-size: 1.2em !important;
+        letter-spacing: 1px;
+    }
+}

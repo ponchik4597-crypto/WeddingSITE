@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/фон.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Marck Script';
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-card {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    max-width: 800px;
+    width: 95%;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.main-title {
+    font-family: 'Marck Script';
+    font-size: clamp(3em, 12vw, 5em);
+    margin: 0 0 20px 0;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-family: 'Marck Script';
+    font-size: clamp(1.8em, 6vw, 2.8em);
+    margin: 0 auto 35px auto;
+    line-height: 1.4;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dress-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Dancing Script';
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        padding: 10px 5px;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    .content-card {
+        padding: 25px 15px;
+        width: 96%;
+        border-radius: 15px;
+    }
+
+    .main-title {
+        font-size: 3.5em !important;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+
+    .subtitle {
+        font-size: 1.8em !important;
+        margin-bottom: 25px;
+        line-height: 1.2;
+        padding: 0 5px;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .dress-image {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .back-link {
+        margin-top: 40px;
+        width: 90%;
+        font-size: 1.3em;
+    }
+    .back-link:hover {
+    background: white;
+    color: black;
+    }
+}

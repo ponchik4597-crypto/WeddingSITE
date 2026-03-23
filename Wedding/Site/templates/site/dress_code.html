@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дресс-код</title>
+
+    <!-- Pacifico и Marck Script -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+
+    <!-- подключение CSS с версией ?v=2 -->
+    <link rel="stylesheet" href="{% static 'site/css/dress_code.css' %}?v=2">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-card">
+            <h1 class="main-title">Дресс-код</h1>
+            <p class="subtitle">Будем рады, если вы поддержите <br> праздничную атмосферу <br> и выберете нарядный образ!</p>
+            <div class="image-container">
+                <img src="{% static 'site/images/дрескод.jpg' %}" class="dress-image">
+            </div>
+            <!-- Кнопка назад -->
+            <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>

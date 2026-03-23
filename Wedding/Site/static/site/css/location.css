@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/фон.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Marck Script';
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Отступы от краев экрана */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Marck Script';
+    font-size: clamp(2.5em, 10vw, 4.5em);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.timing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+.timing-block {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.time {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d4a373;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.timing-block img {
+    width: 150px;
+    height: auto;
+}
+
+.button-container {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    border: 2px solid white;
+    padding: 12px 40px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 480px) {
+    .container { padding: 20px 15px; }
+    .timing-block { padding: 20px 10px; }
+    .time { font-size: 28px; }
+    .timing-block img {
+        max-width: 120px; /**/
+    }
+    .description { font-size: 20px; }
+}

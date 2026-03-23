@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Анкета гостя</title>
+
+<!-- шрифт Brush Script -->
+<link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet" />
+<!-- шрифт Pacifico для имен и даты -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+<!-- Подключение CSS -->
+<link rel="stylesheet" href="{% static 'site/css/presence.css' %}">
+</head>
+<body>
+<div class="header-group">
+    <h1 class="main-title">Анкета гостя</h1>
+    <p class="subtitle">Пожалуйста, отправьте ответ до 1 июля 2026 года</p>
+</div>
+
+<form method="post" novalidate>
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+
+  <label for="{{ form.name.id_for_label }}">Имя:</label><br />
+  {{ form.name }}<br />
+
+  <div class="radio-group">
+  <label>Сможете ли Вы прийти?</label><br />
+  {% for radio in form.presence %}
+    <label class="radio-label" for="{{ radio.id_for_label }}">
+      {{ radio.tag }}
+      <span class="custom-radio"></span>
+      {{ radio.choice_label }}
+    </label>
+  {% endfor %}
+</div>
+
+  <div class="radio-group">
+    <label>Вы придете с парой?</label><br />
+    {% for radio in form.plusone %}
+      <label class="radio-label" for="{{ radio.id_for_label }}">
+        {{ radio.tag }}
+        <span class="custom-radio"></span>
+        {{ radio.choice_label }}
+        </label>
+    {% endfor %}
+  </div>
+
+  <label for="{{ form.drink.id_for_label }}">Ваши предпочтения по напиткам:</label><br />
+  {{ form.drink }}<br />
+
+  <button type="submit">Отправить</button>
+</form>
+
+</body>
+</html>

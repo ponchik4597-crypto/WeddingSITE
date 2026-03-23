@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо!</title>
+    <!-- шрифт Dancing Script -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'site/css/thanks.css' %}">
+</head>
+<body>
+    <div class="message-box">
+        <img src="{% static 'site/images/IMG_8529.png' %}" alt="Свадебное фото" class="thank-you-img">
+        <h1>Спасибо!</h1>
+        <p>Ваш ответ успешно отправлен. <br> С нетерпением ждем встречи на нашем празднике!</p>
+        <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайминг</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'site/css/location.css' %}?v=3">
+</head>
+<body>
+    <div class="container">
+        <div class="header-group">
+            <h1 class="main-title">Тайминг</h1>
+        </div>
+
+        <div class="timing-list">
+            <!-- Сбор гостей -->
+            <div class="timing-block">
+                <div class="time">13:20</div>
+                <div class="description">Сбор гостей у ЗАГСа</div>
+                <div class="address">г. Барнаул, ул. Ленина, 11</div>
+                <img src="{% static 'site/images/бокалы.png' %}" alt="Сбор" />
+            </div>
+
+            <!-- Церемония -->
+            <div class="timing-block">
+                <div class="time">13:40</div>
+                <div class="description">Свадебная церемония</div>
+                <img src="{% static 'site/images/кольца.png' %}" alt="Церемония" />
+            </div>
+
+            <!-- Банкет -->
+            <div class="timing-block">
+                <div class="time">16:00</div>
+                <div class="description">Начало банкета</div>
+                <div class="address">г. Барнаул, ул. Интернациональная, 116</div>
+                <img src="{% static 'site/images/банкет.png' %}" alt="Банкет" />
+            </div>
+
+            <!-- Торт -->
+            <div class="timing-block">
+                <div class="time">20:00</div>
+                <div class="description">Торт</div>
+                <img src="{% static 'site/images/торт.png' %}" alt="Торт" />
+            </div>
+        </div>
+
+        <!-- Кнопка На главную -->
+        <div class="button-container">
+            <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
