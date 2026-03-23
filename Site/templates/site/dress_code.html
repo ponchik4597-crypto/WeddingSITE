@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дресс-код</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+ <!-- Dancing Script -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+<!-- Pacifico для имен и даты -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<!-- Brush Script -->
+<link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+<link rel="stylesheet" href="{% static 'site/css/dress_code.css' %}">
+</head>
+
+<body>
+<div class="header-group">
+    <h1 class="main-title">Дресс-код</h1>
+    <p class="subtitle">Мы будем рады, если вы поддержите праздничную атмосферу<br> и выберете нарядный образ!</p>
+</div>
+<div class="image-container">
+        <img src="{% static 'site/images/дрескод.jpg' %}" alt="Праздничный наряд" class="dress-image">
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+python-dotenv
+asgiref==3.11.1
+certifi==2025.8.3
+Django==6.0.2
+pillow==12.1.1
+sqlparse==0.5.5

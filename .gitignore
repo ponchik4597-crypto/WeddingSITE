@@ -1,0 +1,19 @@
+# Среды разработки и системные файлы
+.idea/
+.vscode/
+.DS_Store
+*.pyc
+.env
+.venv/
+env/
+venv/
+
+# Python кэш
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+
+# Django
+db.sqlite3
+media/
+staticfiles/

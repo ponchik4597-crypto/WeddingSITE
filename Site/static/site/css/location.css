@@ -1,0 +1,140 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-image: url('../images/фон.jpg');
+  background-color: #f9f9f9;
+  padding: 40px;
+  color: #fff;
+}
+
+/* Заголовок */
+.header-group {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Одинаковый отступ до формы/картинки/тайминга */
+    padding: 0 15px;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.2em, 8vw, 4em); /* Одинаковый размер везде */
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.2em, 4vw, 1.8em); /* Одинаковый размер подзаголовка */
+    margin: 10px auto 0 auto;
+    color: white;
+    max-width: 800px;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+/* Основной контейнер */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Обёртка двух колонок и линии */
+.timing-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Колонки */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+
+.left-column, .right-column {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Волнистая линия.svg - контейнер */
+.separator {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Стили для блоков */
+.timing-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  color: #fff;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.time {
+  font-size: 35px; /*размер времени*/
+  font-weight: bold;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.description { /*Размер описания*/
+  font-size: 25px;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.address { /*Размер адреса*/
+  font-size: 23px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.timing-block img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+  display: block;
+  margin-top: 10px;
+  background: transparent;
+}
+
+@media (max-width: 800px) {
+  .timing-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .separator {
+    display: none;
+  }
+}

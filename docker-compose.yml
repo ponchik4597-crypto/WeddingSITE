@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+      - db_data:/app/db.sqlite3 # Для сохранения базы при перезапуске
+    ports:
+      - "8000:8000"
+    restart: always
+
+volumes:
+  db_data:

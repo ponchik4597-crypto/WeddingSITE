@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/фон.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', cursive; /* Унифицированный шрифт */
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.message-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 20px 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 500px;
+    width: 90%;
+    margin-top: -30px; /* Немного приподнимаем блок для баланса */
+}
+
+.thank-you-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    opacity: 1; /* Делаем фото четким, а не прозрачным */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Как на всех страницах */
+    font-size: clamp(2.2em, 8vw, 3.5em); /* Тот же размер, что и main-title */
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.2em, 4vw, 1.6em); /* Тот же размер, что и subtitle */
+    margin-bottom: 30px;
+    line-height: 1.3;
+    opacity: 0.9;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+/* Убираем перенос строки на мобилках */
+@media (max-width: 480px) {
+    p br {
+        display: none;
+    }
+}

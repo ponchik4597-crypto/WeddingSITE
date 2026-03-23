@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px; /* Уменьшили для мобилок, на ПК добавим в контейнере */
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+    background-image: url('../images/фон.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Группа заголовков */
+.header-group {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Одинаковый отступ до формы/картинки/тайминга */
+    padding: 0 15px;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.2em, 8vw, 4em); /* Одинаковый размер везде */
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.2em, 4vw, 1.8em); /* Одинаковый размер подзаголовка */
+    margin: 10px auto 0 auto;
+    color: white;
+    max-width: 800px;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+.image-container {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dress-image {
+    opacity: 0.9;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .main-title {
+        font-size: 3em;
+    }
+    .subtitle {
+        font-size: 1.5em;
+    }
+    /* Скрываем <br> чтобы текст не ломался на узком экране */
+    .subtitle br {
+        display: none;
+    }
+}

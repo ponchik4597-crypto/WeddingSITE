@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Тайминг</title>
+
+<!-- Подключение шрифтов -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet" />
+
+<!-- Подключение CSS -->
+<link rel="stylesheet" href="{% static 'site/css/location.css' %}">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="header-group">
+    <h1 class="main-title">Тайминг</h1>
+</div>
+
+  <div class="timing-wrapper">
+
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="column left-column">
+      <!-- 1. Сбор гостей (13:30) -->
+      <div class="timing-block">
+        <div class="time">13:30</div>
+        <div class="description">Сбор гостей у ЗАГСа</div>
+        <div class="address">г. Барнаул, ул. Ленина, 11</div>
+        <img src="{% static 'site/images/бокалы.png' %}" alt="ЗАГС" />
+      </div>
+
+      <!-- 3. Начало банкета (15:00) -->
+      <div class="timing-block">
+        <div class="time">15:00</div>
+        <div class="description">Начало банкета</div>
+        <div class="address">г. Барнаул, ул. Интернациональная, 116</div>
+        <img src="{% static 'site/images/банкет.png' %}" alt="Банкет" />
+      </div>
+    </div>
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div class="column right-column">
+      <!-- 2. Церемония (13:40) -->
+      <div class="timing-block">
+        <div class="time">13:40</div>
+        <div class="description">Свадебная церемония</div>
+        <img src="{% static 'site/images/кольца.png' %}" alt="Свадебная церемония" />
+      </div>
+
+      <!-- 4. Торт (19:00) -->
+      <div class="timing-block">
+        <div class="time">19:00</div>
+        <div class="description">Торт</div>
+        <img src="{% static 'site/images/торт.png' %}" alt="Торт" />
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+</body>
+</html>
