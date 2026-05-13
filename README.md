@@ -48,7 +48,7 @@ docker-compose exec web python manage.py shell -c "from Site.models import Guest
 docker-compose exec web python manage.py shell -c "from Site.models import Guest; Guest.objects.all().delete(); print('База очищена')"
 ```
 
-## 🔑 Права доступа
+## Права доступа
 ```bash
 chmod 666 db.sqlite3
 chmod 777 .
