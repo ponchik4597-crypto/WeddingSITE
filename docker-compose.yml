@@ -3,12 +3,11 @@ version: '3.8'
 services:
   web:
     build: .
+    # Проброс всей папки проекта целиком, чтобы файлы блокировок SQLite создавались корректно
     volumes:
       - .:/app
-      - db_data:/app/db.sqlite3 # Для сохранения базы при перезапуске
+    env_file:
+      - .env
     ports:
-      - "8000:8000"
+      - "8080:8000"
     restart: always
-
-volumes:
-  db_data:

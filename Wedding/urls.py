@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from Site.views import index
+from Site.views import main
 from Site.views import location
 from Site.views import presence
 from Site.views import dress_code

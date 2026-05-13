@@ -3,16 +3,13 @@ from django.shortcuts import render, redirect
 from .models import Guest
 from .forms import GuestForm
 
-def index(request):
-    return render(request, "site/index.html")
+
+def main(request):
+    return render(request, "site/main.html")
 
 
 def location(request):
     return render(request, "site/location.html")
-
-
-def new(request):
-    return render(request, "site/new.html")
 
 
 def dress_code(request):
@@ -24,7 +21,7 @@ def presence(request):
         form = GuestForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'thanks.html')  # после успешной отправки
+            return render(request, 'site/thanks.html')  # после успешной отправки
     else:
         form = GuestForm()
     return render(request, 'site/presence.html', {'form': form})

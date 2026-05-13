@@ -2,66 +2,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Тайминг</title>
-
-<!-- Подключение шрифтов -->
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet" />
-
-<!-- Подключение CSS -->
-<link rel="stylesheet" href="{% static 'site/css/location.css' %}">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайминг</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'site/css/location.css' %}?v=3">
 </head>
 <body>
+    <div class="container">
+        <div class="header-group">
+            <h1 class="main-title">Тайминг</h1>
+        </div>
 
-<div class="container">
-  <div class="header-group">
-    <h1 class="main-title">Тайминг</h1>
-</div>
+        <div class="timing-list">
+            <!-- Сбор гостей -->
+            <div class="timing-block">
+                <div class="time">13:20</div>
+                <div class="description">Сбор гостей у ЗАГСа</div>
+                <div class="address">г. Барнаул, ул. Ленина, 11</div>
+                <img src="{% static 'site/images/бокалы.png' %}" alt="Сбор" />
+            </div>
 
-  <div class="timing-wrapper">
+            <!-- Церемония -->
+            <div class="timing-block">
+                <div class="time">13:40</div>
+                <div class="description">Свадебная церемония</div>
+                <img src="{% static 'site/images/кольца.png' %}" alt="Церемония" />
+            </div>
 
-    <!-- ЛЕВАЯ КОЛОНКА -->
-    <div class="column left-column">
-      <!-- 1. Сбор гостей (13:30) -->
-      <div class="timing-block">
-        <div class="time">13:30</div>
-        <div class="description">Сбор гостей у ЗАГСа</div>
-        <div class="address">г. Барнаул, ул. Ленина, 11</div>
-        <img src="{% static 'site/images/бокалы.png' %}" alt="ЗАГС" />
-      </div>
+            <!-- Банкет -->
+            <div class="timing-block">
+                <div class="time">16:00</div>
+                <div class="description">Начало банкета</div>
+                <div class="address">г. Барнаул, ул. Интернациональная, 116</div>
+                <img src="{% static 'site/images/банкет.png' %}" alt="Банкет" />
+            </div>
 
-      <!-- 3. Начало банкета (15:00) -->
-      <div class="timing-block">
-        <div class="time">15:00</div>
-        <div class="description">Начало банкета</div>
-        <div class="address">г. Барнаул, ул. Интернациональная, 116</div>
-        <img src="{% static 'site/images/банкет.png' %}" alt="Банкет" />
-      </div>
+            <!-- Торт -->
+            <div class="timing-block">
+                <div class="time">20:00</div>
+                <div class="description">Торт</div>
+                <img src="{% static 'site/images/торт.png' %}" alt="Торт" />
+            </div>
+        </div>
+
+        <!-- Кнопка На главную -->
+        <div class="button-container">
+            <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
+        </div>
     </div>
-    <!-- ПРАВАЯ КОЛОНКА -->
-    <div class="column right-column">
-      <!-- 2. Церемония (13:40) -->
-      <div class="timing-block">
-        <div class="time">13:40</div>
-        <div class="description">Свадебная церемония</div>
-        <img src="{% static 'site/images/кольца.png' %}" alt="Свадебная церемония" />
-      </div>
-
-      <!-- 4. Торт (19:00) -->
-      <div class="timing-block">
-        <div class="time">19:00</div>
-        <div class="description">Торт</div>
-        <img src="{% static 'site/images/торт.png' %}" alt="Торт" />
-      </div>
-    </div>
-
-  </div>
-
-
-</div>
-
 </body>
 </html>
