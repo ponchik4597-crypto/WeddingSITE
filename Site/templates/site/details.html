@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тайминг</title>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'site/css/location.css' %}?v=3">
+    <title>Тайминг и Дресс-код</title>
+
+    <!-- Подключение Pacifico и Marck Script -->
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="{% static 'site/css/details.css' %}?v=5">
 </head>
 <body>
-    <div class="container">
+
+    <div class="page-wrapper">
+
+        <!-- Заголовок Тайминг -->
         <div class="header-group">
             <h1 class="main-title">Тайминг</h1>
         </div>
@@ -46,7 +55,17 @@
             </div>
         </div>
 
-        <!-- Кнопка На главную -->
+        <!-- Заголовок Дресс-код -->
+        <div class="header-group">
+            <h1 class="main-title spec-margin">Дресс-код</h1>
+            <p class="dresscode-text">
+                Будем рады, если вы поддержите <br>
+                праздничную атмосферу <br>
+                и выберете нарядный образ!
+            </p>
+        </div>
+
+        <!-- Кнопка на главную -->
         <div class="button-container">
             <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
         </div>

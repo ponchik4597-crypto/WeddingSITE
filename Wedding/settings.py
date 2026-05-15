@@ -7,6 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
+DB_DIR = os.path.join(BASE_DIR, 'db_store')
+os.makedirs(DB_DIR, exist_ok=True)
+
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
@@ -54,7 +57,7 @@ WSGI_APPLICATION = 'Wedding.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(DB_DIR, 'db.sqlite3'),
     }
 }
 

@@ -1,6 +1,5 @@
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
-from .models import Guest
 from .forms import GuestForm
 
 
@@ -8,12 +7,8 @@ def main(request):
     return render(request, "site/main.html")
 
 
-def location(request):
-    return render(request, "site/location.html")
-
-
-def dress_code(request):
-    return render(request, "site/dress_code.html")
+def details(request):
+    return render(request, "site/details.html")
 
 
 def presence(request):
@@ -21,7 +16,10 @@ def presence(request):
         form = GuestForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'site/thanks.html')  # после успешной отправки
+            guest_presence = form.cleaned_data.get('presence')
+            if guest_presence == 'no':
+                return redirect('not_coming')
+            return redirect('thank_you')
     else:
         form = GuestForm()
     return render(request, 'site/presence.html', {'form': form})
@@ -29,6 +27,10 @@ def presence(request):
 
 def thank_you(request):
     return render(request, 'site/thanks.html')
+
+
+def not_coming(request):
+    return render(request, 'site/not_coming.html')
 
 
 def pageNotFound(request, exception):

@@ -18,9 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from Site.views import main
-from Site.views import location
+from Site.views import details
 from Site.views import presence
-from Site.views import dress_code
+from Site.views import thank_you
+from Site.views import not_coming
 
 urlpatterns = [
     path('admin/', admin.site.urls),

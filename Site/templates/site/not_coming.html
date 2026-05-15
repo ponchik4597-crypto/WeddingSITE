@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Очень жаль!</title>
+
+    <!-- Подключение Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link href="https://googleapis.com">
+
+    <link rel="stylesheet" href="{% static 'site/css/thanks.css' %}?v=21">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="message-box">
+
+            <div class="img-wrapper">
+                <img src="{% static 'site/images/кот.png' %}" alt="Свадебное фото" class="thank-you-img">
+            </div>
+
+            <div class="text-group">
+                <h1>Будем скучать!</h1>
+
+                <p class="main-message">
+                    Очень жаль, что вы не сможете быть с нами.<br>
+                    Надеемся, что у нас будет еще много поводов увидеться!
+                </p>
+
+                <p class="sub-text">
+                    Если передумаете &ndash; напишите
+                    <a href="tel:+79132367357" class="phone-link" style="color: #E6C280 !important; -webkit-text-fill-color: #E6C280 !important;">нам</a>
+                </p>
+            </div>
+
+            <a href="{% url 'weddingsite' %}" class="back-link">Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>

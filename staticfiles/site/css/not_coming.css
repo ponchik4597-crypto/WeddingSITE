@@ -1,0 +1,169 @@
+/* 🛠️ БАЗОВОЕ ОБНУЛЕНИЕ ДЛЯ ВСЕХ УСТРОЙСТВ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow: hidden; /* Полностью блокируем прокрутку, так как контент теперь идеально вписан */
+    position: relative;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/алтай2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Marck Script', 'Georgia', serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Убрали внешние отступы экрана */
+}
+
+/* 📦 ОСНОВНОЙ КОНТЕЙНЕР НА ВСЮ СТРАНИЦУ */
+.message-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение на весь экран поверх картинки Алтая */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    min-height: -webkit-fill-available;
+    border-radius: 0 !important; /* Убираем скругления, так как блок на весь экран */
+
+    /* Распределяем элементы равномерно по всей высоте экрана */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+
+/* 🖼️ ОБЕРТКА И КАРТИНКА (Стала намного больше) */
+.img-wrapper {
+    width: 100%;
+    /* ИСПРАВЛЕНО: Сильно увеличили ширину картинки для больших экранов */
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    display: block;
+    /* ИСПРАВЛЕНО: Перевели формат в более широкий альбомный 16:10 */
+    aspect-ratio: 16 / 10;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7),
+                0 5px 15px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+.thank-you-img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover !important;
+}
+
+/* НОВЫЙ БЛОК: Держит вместе заголовок и текст, не давая им разлетаться */
+.text-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-family: 'Marck Script', serif;
+    font-size: 2.8rem;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    line-height: 1.2;
+    /* ИСПРАВЛЕНО: Щедрый отступ снизу на ПК */
+    margin-bottom: 35px !important;
+}
+
+p {
+    font-family: 'Marck Script', serif;
+    font-size: 1.5rem; /* Слегка увеличили шрифт текста */
+    margin-bottom: 20px;
+    line-height: 1.4;
+    opacity: 0.95;
+    padding: 0 15px;
+}
+
+.sub-text {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+/* 🔗 КНОПКА */
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Marck Script', serif;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+    padding: 12px 40px; /* Сделали кнопку чуть крупнее и заметнее */
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    width: auto;
+    max-width: 100%;
+    margin-top: auto; /* Прижимает кнопку к нижней части экрана */
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+/* 📱 СТИЛИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+@media (max-width: 480px) {
+    .message-box {
+        padding: 30px 20px; /* Более kompaktные паддинги на телефонах */
+    }
+
+    .img-wrapper {
+        max-width: 95% !important;
+        width: 95% !important;
+        margin-bottom: 10px !important;
+        aspect-ratio: 4 / 3 !important;
+    }
+
+    .text-group {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        /* ИСПРАВЛЕНО: Заметный воздушный отступ после заголовка на мобильных экранах */
+        margin-bottom: 25px !important;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .sub-text {
+        font-size: 1.05rem !important;
+        margin-top: 6px;
+    }
+
+    .back-link {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    background-image: url('../images/IMG_9327.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Marck Script', cursive;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px 30px 60px 30px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.names {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(3.5em, 10vw, 6.5em);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.small-photo {
+    width: 130px;
+    height: auto;
+    background: transparent;
+    margin: 20px auto 75px auto;
+    display: block;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.invitation {
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(1.6em, 6vw, 2.5em);
+    padding: 0 15px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.date-info {
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(1.6em, 6vw, 2.5em);
+    padding: 0 15px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.bottom-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 10px;
+}
+
+.action-btn {
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(1.1em, 2.2vw, 1.6em);
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-bright {
+    background-color: #e76f51;
+    border: none;
+    color: white;
+}
+.btn-bright:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(231,111,81,0.4);
+}
+
+.btn-simple {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    color: white;
+}
+.btn-simple:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+}
+
+.date-timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: clamp(1.5em, 5vw, 2.2em);
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Marck Script', cursive;
+}
+
+@media (max-width: 480px) {
+    br {
+        display: none;
+    }
+    body {
+        background-size: auto 100% !important;
+        background-position: 85% center !important;
+    }
+    .container {
+        padding: 20px 15px 15px 15px !important;
+        justify-content: flex-end !important;
+        position: relative;
+    }
+
+    .main-content-flow {
+        gap: 15px !important;
+        margin-bottom: 0 !important;
+        width: 100%;
+    }
+
+    .names {
+        font-size: 2.5em !important;
+        position: absolute !important;
+        top: 35px !important;
+        left: 0;
+        margin: 0 !important;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .small-photo {
+        width: 70px;
+        position: absolute !important;
+        top: 90px !important;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 !important;
+        z-index: 5;
+    }
+
+    .invitation {
+        font-size: 1.05em !important;
+        line-height: 1.2;
+        margin-top: 245px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .date-info {
+        font-family: 'Marck Script', cursive;
+        font-size: 1.15em !important;
+        white-space: nowrap !important;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px !important;
+    }
+
+    .bottom-buttons-row {
+        flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        margin-bottom: 5px !important;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .action-btn {
+        font-size: 0.9em !important;
+        padding: 6px 8px;
+        flex: 1;
+        max-width: 140px;
+        text-align: center;
+        white-space: normal !important;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+    }
+
+    .date-timer-container {
+        margin-bottom: 0 !important;
+        width: 100%;
+    }
+
+    .timer {
+        font-size: 1.15em !important;
+        padding: 6px 12px;
+        display: inline-block;
+    }
+}
