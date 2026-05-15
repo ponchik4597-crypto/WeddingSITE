@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 EXPOSE 8000
+RUN python manage.py collectstatic --noinput
 
 # запуск через Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Wedding.wsgi:application"]
